@@ -15,11 +15,27 @@
   <script type="text/javascript" src="lib/apiGatewayCore/simpleHttpClient.js"></script>
   <script type="text/javascript" src="lib/apiGatewayCore/utils.js"></script>
   <script type="text/javascript" src="apigClient.js"></script>
+  <script src="https://sdk.amazonaws.com/js/aws-sdk-2.41.0.min.js"></script>
+  <script type="text/javascript" src="amazon-cognito-auth-js-master/dist/amazon-cognito-auth.min.js"></script>
+  <script type="text/javascript" src="dist/aws-sdk.min.js"></script>
   <link rel="stylesheet" type="text/css" href="Chat.css">
+  <link rel="shortcut icon" href="">
   <script src="chat.js"></script>
   <script src='config.js'></script>
 </head>
-<body>
+<script type="text/javascript">
+
+function checklogin(){
+search = window.location.search;
+if (search.indexOf("code=") < 0) {
+    alert("Please Login First!");
+    window.location = "https://chat-bot.auth.us-east-1.amazoncognito.com/login?response_type=code&client_id=2hk18nobb42nk7dengep54ri7&redirect_uri=https://s3.amazonaws.com/sneha-chat-bot/index.html";
+}
+}
+
+</script>
+
+<body onload="checklogin()">
 <div class="chat_window">
   <div class="top_menu">
     <div class="buttons"></div>
