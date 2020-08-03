@@ -44,7 +44,7 @@ def lambda_handler(event, context):
         
 
 
-        headers = {'Authorization':'Bearer 9zufu4z0309-nY2mBhXSm8GZEctBZGrtIoR9eqt9sxVv7h9NfBXMsNySKf1p3Y_RHF4vg3nBmBBfxS8SPqOAeIcOKNMIJQf-MQmlyUhbQxoX2dSZatl9sttTKZDnW3Yx',}
+        headers = {'Authorization':'Bearer API Key here',}
         client = boto3.client('dynamodb')
         print("clientt yahan")
         dynamodb = boto3.resource('dynamodb', region_name='us-east-1')
